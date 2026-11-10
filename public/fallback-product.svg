@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">RENTORA məhsul şəkli</title>
+  <desc id="desc">Məhsul şəkli yüklənmədikdə göstərilən ehtiyat təsvir</desc>
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#171b26"/><stop offset="1" stop-color="#0a0e18"/></linearGradient></defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <g fill="none" stroke="#80d5cb" stroke-width="12" opacity=".8"><rect x="290" y="145" width="220" height="170" rx="28"/><path d="M340 145l22-38h76l22 38M325 345h150"/><circle cx="400" cy="230" r="55"/></g>
+  <text x="400" y="410" fill="#bdc9c6" font-family="Arial,sans-serif" font-size="25" text-anchor="middle">RENTORA • şəkil mövcud deyil</text>
+</svg>

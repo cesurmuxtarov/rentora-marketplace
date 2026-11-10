@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply m-0 min-w-[320px] bg-surface font-body text-text antialiased;
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.012),
+      transparent 280px
+    );
+  }
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mint focus-visible:ring-offset-2 focus-visible:ring-offset-ink;
+  }
+  button {
+    @apply disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.6;
+  }
+}
+
+@layer components {
+  .page {
+    @apply mx-auto w-full max-w-[1280px] px-4 py-7 sm:px-6 sm:py-9 lg:px-8;
+  }
+  .card {
+    @apply rounded-xl border border-white/[0.07] bg-panel shadow-ambient;
+  }
+  .card-pad {
+    @apply card p-5 sm:p-6;
+  }
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors duration-200;
+  }
+  .btn-primary {
+    @apply btn bg-teal text-white hover:bg-[#0d6b64] disabled:bg-[#253f3d] disabled:text-slate-400;
+  }
+  .btn-secondary {
+    @apply btn border border-white/10 bg-elevated text-text hover:border-white/20 hover:bg-[#232733];
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-muted hover:bg-white/5 hover:text-text;
+  }
+  .field {
+    @apply min-h-11 w-full rounded-lg border border-white/10 bg-[#121721] px-3 text-sm text-text placeholder:text-slate-500 hover:border-white/20 focus:border-teal;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-slate-300;
+  }
+  .field-error {
+    @apply mt-1.5 block text-xs text-red-300;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-[11px] font-semibold;
+  }
+  .stat {
+    @apply rounded-lg border border-white/[0.05] bg-elevated p-4;
+  }
+  .section-card {
+    @apply rounded-xl border border-white/[0.07] bg-panel p-5 sm:p-6;
+  }
+  .listing-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .skeleton {
+    @apply animate-pulse rounded-lg bg-white/[0.06];
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.hero-grid {
+  background: radial-gradient(
+    circle at 76% 30%,
+    rgba(15, 118, 110, 0.12),
+    transparent 34%
+  );
+}
+.fade-up {
+  animation: fade-up 0.45s ease-out both;
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
